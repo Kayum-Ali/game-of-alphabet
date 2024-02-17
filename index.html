@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -96,12 +96,12 @@
                     <button class="btn rounded-full bg-[#894189] text-white px-4">
                         Life
                         <img src="images/Group23.png" alt="">
-                        <span>1</span>
+                        <span id="currentLife">10</span>
                     </button>
                     <button class="btn rounded-full bg-[#360490] text-white px-4">
                         Score
                         <img src="images/monetization_on.png" alt="">
-                        <span>1</span>
+                        <span id="currentScore">0</span>
                     </button>
                 </div>
             </div>
@@ -109,13 +109,15 @@
         </section>
 
         <!-- srore -->
-        <section class="score flex justify-center items-center min-h-screen hidden">
+        <section id="finalScore" class=" flex justify-center items-center min-h-screen hidden">
             <div class="text-white text-center  space-y-6 bg-[#FFFFFF33] p-4 rounded-lg">
+                 <h3 class="text-3xl">Game Over!</h3>
+                
                 <h1 class="text-6xl">
                     <span class="font-extrabold">Score :</span>
-                    <span>14</span>
+                    <span id="lastScore">14</span>
                 </h1>
-                <button class="btn bg-white text-black">Play Again</button>
+                <button onclick="play()" class="btn bg-white text-black">Play Again</button>
                 <p>Practice will make you Pro</p>
             </div>
 
